@@ -23,7 +23,7 @@
       <span>{post.readingTime}</span>
     </div>
   </div>
-  <div class="flex-1">{@html post.preview.html}</div>
+  <div class="flex-1 leading-snug">{@html post.preview.html}</div>
   <slot name="actions">
     <div class="flex justify-end w-full">
       <ButtonLink href={`/posts/${post.slug}`}>Read More</ButtonLink>

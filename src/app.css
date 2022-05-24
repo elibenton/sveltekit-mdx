@@ -6,9 +6,9 @@
   }
 }
 
-.prose img {
+/* .prose img {
   @apply rounded-md shadow-md dark:shadow-slate-900;
-}
+} */
 
 .prose video {
   @apply rounded-md shadow-md dark:shadow-slate-900;
