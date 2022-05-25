@@ -1,8 +1,10 @@
 <script>
+  import { onMount } from 'svelte'
+
   import Gallery from 'svelte-brick-gallery'
 
-  let images = [
-    { src: 'public/images/1.jpg' },
+  export let images = [
+    { src: 'photos/1.jpg' },
     // { src: 'public/images/2.jpg' },
     // { src: 'public/images/3.jpg' },
     // { src: 'public/images/4.jpg' },
@@ -25,8 +27,18 @@
     // { src: 'public/images/21.jpg' },
     { src: 'public/images/22.jpg' }
   ]
+
+  let mounted = false
+
+  $: console.log(mounted)
+
+  onMount(() => {
+    mounted = true
+  })
 </script>
 
-<Gallery {images} gap={0} itemHeight={340} />
+{#if mounted}
+  <Gallery {images} gap={0} itemHeight={340} />
+{/if}
 
 <!-- <img src="public/images/1.jpg" /> -->
